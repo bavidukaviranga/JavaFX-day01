@@ -30,7 +30,7 @@
       </Label>
       <Label layoutX="32.0" layoutY="344.0" text="Email: nasa@gmail.com" />
       <Label layoutX="32.0" layoutY="327.0" prefHeight="0.0" prefWidth="130.0" text="Contact:+9412547852" />
-      <Label layoutX="416.0" layoutY="58.0" text="Loging" textAlignment="CENTER">
+      <Label fx:id="lblSuccess" layoutX="416.0" layoutY="58.0" text="Loging" textAlignment="CENTER">
          <font>
             <Font name="Agency FB Bold" size="24.0" />
          </font>

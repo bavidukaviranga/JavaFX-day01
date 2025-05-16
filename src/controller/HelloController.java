@@ -12,8 +12,7 @@ public class HelloController  {
 //    public TextField txtInput;
     public PasswordField txtPassword;
     public TextField txtEmail;
-
-
+    public Label lblSuccess;
 
 
     public void btnRemove(ActionEvent actionEvent) {
@@ -21,13 +20,27 @@ public class HelloController  {
     }
 
     public void btnLoginOnaction(ActionEvent actionEvent) {
-        String email = txtEmail.getText();
-        System.out.println( email);
-        String password = txtPassword.getText();
-        System.out.println(password);
+        final String email= "saman@gmail.com";
+        final String password = "1234@ssd";
 
-        User user= new User(email,password);
+        String txtEmailText = txtEmail.getText();
+        String txtPasswordText = txtPassword.getText();
+
+
+
+        User user= new User(txtEmailText,txtPasswordText);
         System.out.println(user);
+
+        if (email.equals(txtEmailText)){
+            if (password.equals(txtPasswordText)){
+                lblSuccess.setText("Login Successfully");
+            }else {
+                lblSuccess.setText("Login Fail");
+            }
+        }else {
+            lblSuccess.setText("Login Fail");
+        }
+
 
     }
 }
