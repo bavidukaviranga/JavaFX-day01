@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -33,12 +34,15 @@ public class HelloController  {
 
         if (email.equals(txtEmailText)){
             if (password.equals(txtPasswordText)){
-                lblSuccess.setText("Login Successfully");
+//                lblSuccess.setText("Login Successfully");
+                new Alert(Alert.AlertType.INFORMATION,"Login Success").show();
             }else {
-                lblSuccess.setText("Login Fail");
+//                lblSuccess.setText("Login Fail");
+                new Alert(Alert.AlertType.ERROR,"Login Fail").show();
             }
         }else {
-            lblSuccess.setText("Login Fail");
+//            lblSuccess.setText("Login Fail");
+            new Alert(Alert.AlertType.ERROR,"Login Fail").show();
         }
 
 
